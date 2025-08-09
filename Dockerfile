@@ -14,7 +14,7 @@ COPY package.json pnpm-lock.yaml ./
 RUN corepack prepare pnpm@8.6.4 --activate
 
 # Install dependencies using pnpm
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --registry=https://registry.npmmirror.com
 
 # Copy the rest of the application files
 COPY . /app
