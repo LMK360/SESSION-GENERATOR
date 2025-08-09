@@ -17,7 +17,10 @@ RUN corepack prepare pnpm@8.6.4 --activate
 RUN pnpm install --force --registry=https://registry.npmmirror.com
 
 # Run approve-builds if it's available
-RUN pnpm approve-builds || true
+RUN pnpm exec approve-builds || true
+
+# Install dependencies using pnpm
+RUN pnpm install --force --registry=https://registry.npmmirror.com
 
 # Copy the rest of the application files
 COPY . /app
