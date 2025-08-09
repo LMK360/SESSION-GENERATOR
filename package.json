@@ -7,7 +7,6 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "postinstall": "pnpm approve-builds",
     "start": "node itxxwasi.js"
   },
   "author": "WasiTech",
