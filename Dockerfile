@@ -1,4 +1,3 @@
-Dockerfile
 Use official Node.js image with corepack pre-installed
 FROM node:18
 
